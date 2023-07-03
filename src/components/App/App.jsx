@@ -1,13 +1,21 @@
 import './App.css';
+// Object Destructuring
+// import React from 'react';
+useState = React.useState;
+// {importValue} is an example of Object Destructuring
+import { useState } from 'react';
+
+import Clicker from '../Clicker/Clicker'
 
 function App() {
-    return (
-        <div className="App">
-            <p>Hello! My name is Luke.</p>
-            <button>Click me!</button>
-            <p>I've clicked the button 0 times.</p>
-        </div>
-    );
+    const[color, setColor] = useState('red');
+    
+
+    return(
+    <>
+    <Clicker color={color} setColor={setColor}/>
+    </>
+    )
 }
 
 export default App;
